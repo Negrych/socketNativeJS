@@ -10,7 +10,7 @@ using the command node index
 
 ## Running the Front-end
 
-Open two files, client1.html and client2.html, in two separate browser tabs.
+Open file, index.html  in two  browser tabs.
 
 ## Example Usage
 When incrementing in client1.html, if you open a tab with the client2.html file,
