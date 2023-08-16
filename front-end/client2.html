@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client 2</title>
+<!--    Ця штука буд підсвічуватись жовтим треба натиснути курсором потом alt + enter і ми це інсталюємо-->
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<button id="sendMessage">Send</button>
+
+<p id="text"></p>
+
+<script>
+    // змінна io звявилась глобально після того як поставив бібліотеку <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+    const socket = io('http://localhost:4000/',{query:'userId=2023'})
+
+    const btn = document.getElementById('sendMessage')
+    const text = document.getElementById('text')
+    btn.onclick = ()=> {
+        socket.emit('message:create', {})
+    }
+
+    socket.on('message:get-all', (data) => {
+        text.textContent = data.message;
+    });
+
+
+
+</script>
+</body>
+</html>
