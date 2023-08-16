@@ -13,8 +13,7 @@ using the command node index
 Open file, index.html  in two  browser tabs.
 
 ## Example Usage
-When incrementing in client1.html, if you open a tab with the client2.html file,
-you will see that the changes have also been applied.
+When incrementing in first tab index.html, the same result will be in second tabs
 
 
 
